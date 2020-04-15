@@ -8,6 +8,9 @@ class Api::V1::EventsController < ApplicationController
 
   def create
     calendar = User.find_by(id: event_params[:user_id]).calendar
+    if !calendar
+      calendar = Calendar.create(user_id: event_params[:user_id])
+    end
     full_params = {"title"=> event_params[:title], "date"=> event_params[:date], "details"=> event_params[:details], 'time'=> event_params[:time], "user_id"=> event_params[:user_id], :calendar_id => calendar.id}
     puts full_params
     @event = Event.new(full_params)
