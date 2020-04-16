@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get '/current_user', to: 'auth#show'
       get '/profile', to: 'users#profile'
       post '/signup', to: 'users#create'
+      patch '/edit_event/:id' to: 'events#update'
     end
   end
 
