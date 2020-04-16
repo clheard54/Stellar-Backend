@@ -1,5 +1,5 @@
 class Api::V1::EventsController < ApplicationController
-    before_action :authorized
+    before_action :authorized, only: [:index, :create, :update]
 
   def index
     @events = Event.all
@@ -32,14 +32,14 @@ class Api::V1::EventsController < ApplicationController
     end
   end
 
-  def edit 
-    @event = Event.find(params[:id])
-    if @event
-      render json: @event 
-    else 
-      render json: { error: 'That event does not exist'}, status: :not_acceptable
-    end
-  end
+  # def edit 
+  #   @event = Event.find(params[:id])
+  #   if @event
+  #     render json: @event 
+  #   else 
+  #     render json: { error: 'That event does not exist'}, status: :not_acceptable
+  #   end
+  # end
 
   def update
     @event = Event.find(params[:id])
@@ -47,18 +47,16 @@ class Api::V1::EventsController < ApplicationController
     render json: @event 
   end
 
-  def delete
+  def destroy
     @event = Event.find(params[:id])
     if @event 
       @event.destroy 
       render json: {message: "Event successfully deleted"}
     else 
-      render json: {message: 'Could not destory event'}, status: :not_acceptable
+      render json: {message: 'Could not destroy event'}, status: :not_acceptable
     end
   end
   
-
-
 
   private
 
