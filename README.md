@@ -57,7 +57,7 @@ To open the app, you'll have to start up a local server. In your terminal, navig
  ```
  If you'd like to see your backend database, you can head to "http://localhost:3000/api/v1/constellations" on your favorite browser.
 
-- You'll also need to fork and clone down the [Frontend](https://github.com/cheard54/Mod4-Stellar-Frontend)
+- You'll also need to fork and clone down the [Frontend](https://github.com/clheard54/Mod4-Stellar-Frontend)
 ```
    git clone <example: git@github.com:.../Mod4-Stellar-Frontend.git></example:>
   ```
