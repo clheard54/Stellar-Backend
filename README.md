@@ -31,8 +31,7 @@ Stellar provides a simple interface to explore upcoming astronomical events and 
 <br><br> 
 
 ## Installation 
-[Backend](https://github.com/clheard54/Stellar-Backend)
-## Installing Locally
+### Installing Locally
 
  - If you'd like to clone down this project repository to your local computer, you can do so by forking it, then hitting the "Clone or download" button in your own fork. Copy the SSH link, and open up your computer's Terminal. Inside, type "git clone <the link you've just copied>". 
  ```
